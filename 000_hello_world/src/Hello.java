@@ -1,5 +1,5 @@
 //-------------------------------------------------------------------
-// Lesson Name:   001 - Hello, world...
+// Lesson Name:   000 - Hello, world...
 // Author:        Brandon Monier
 // Created:       2019-07-13
 // Last Modified: 2019-07-13
