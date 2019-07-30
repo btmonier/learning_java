@@ -21,7 +21,7 @@ package com.btmonier;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         boolean gameOver = true;
         int score = 800;
@@ -67,6 +67,16 @@ public class Main {
         System.out.println(displayHighScorePosition("Brandon", calculateHighScorePosition(50)));
         System.out.println(displayHighScorePosition("Bobby", calculateHighScorePosition(1000)));
 
+
+        System.out.println("\n");
+        System.out.println("Converter test... " + toMilesPerHour(1.5));
+
+        progressPercentage(10, 25);
+
+        for(int i = 0; i <= 25; i++) {
+            progressPercentage(i, 25);
+            Thread.sleep(200);
+        }
     }
 
     // What if we want to modify the scoring parameters on the fly?
@@ -154,5 +164,47 @@ public class Main {
 
         return position;
 
+    }
+
+
+    public static long toMilesPerHour(double kilometersPerHour) {
+        long mph;
+        if (kilometersPerHour < 0) {
+            mph = -1;
+        } else {
+            mph = Math.round(kilometersPerHour / 1.609);
+        }
+
+        return mph;
+    }
+
+    public static void progressPercentage(int done, int total) {
+        int size = 15;
+        String iconLeftBoundary = "[";
+        String iconDone = "=";
+        String iconRemain = ".";
+        String iconRightBoundary = "]";
+
+        if (done > total) {
+            throw new IllegalArgumentException();
+        }
+        int donePercents = (100 * done) / total;
+        int doneLength = size * donePercents / 100;
+
+        StringBuilder bar = new StringBuilder(iconLeftBoundary);
+        for (int i = 0; i < size; i++) {
+            if (i < doneLength) {
+                bar.append(iconDone);
+            } else {
+                bar.append(iconRemain);
+            }
+        }
+        bar.append(iconRightBoundary);
+
+        System.out.print("\r" + bar + " " + donePercents + "%");
+
+        if (done == total) {
+            System.out.print("\n");
+        }
     }
 }
