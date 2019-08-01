@@ -2,6 +2,11 @@ package com.btmonier;
 
 public class Main {
 
+    // Create a constant (bonus) -
+    // Constants are variables that can NOT be changed
+    // These are similar to global variables in R
+    public static final String INVALID_INPUT_MESSAGE = "Invalid value";
+
     public static void main(String[] args) {
         // Challenge 1
         //
@@ -40,7 +45,7 @@ public class Main {
 
         // validation check
         if (minutes < 0 || seconds < 0 || seconds > 60) {
-            return "Invalid value.";
+            return INVALID_INPUT_MESSAGE;
         }
 
         int totalSeconds = (minutes * 60) + seconds;
@@ -49,10 +54,12 @@ public class Main {
         int totalMinutes = totalSeconds % 3600 / 60;
         int remSeconds = totalSeconds % 3600 % 60;
 
+        // Bonus section (convert to string)
         String outH = Integer.toString(totalHours);
         String outM = Integer.toString(totalMinutes);
         String outS = Integer.toString(remSeconds);
 
+        // Bonus section (check length of string variables)
         if (outH.length() == 1) {
             outH = "0" + outH;
         }
@@ -72,7 +79,7 @@ public class Main {
 
         // validation check
         if (seconds < 0) {
-            return "Invalid value";
+            return INVALID_INPUT_MESSAGE;
         }
 
         int totalMinutes = seconds / 60;
