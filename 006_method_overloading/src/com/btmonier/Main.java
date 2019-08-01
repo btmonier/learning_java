@@ -60,6 +60,17 @@ public class Main {
         // Calling another overloaded method just requires you to use the
         // right number of parameters.
 
+
+        // Challenge (part 1)
+        System.out.println("\n=== CHALLENGE 1 ===");
+        calcFeetAndInchesToCentimeters(2,11); // correct return
+        calcFeetAndInchesToCentimeters(2,14); // incorrect return
+
+        // Challenge (part 2)
+        System.out.println("\n=== CHALLENGE 2 ===");
+        calcFeetAndInchesToCentimeters(56);
+        calcFeetAndInchesToCentimeters(-34);
+
     }
 
     // Example method
@@ -86,4 +97,32 @@ public class Main {
     //    System.out.println("No player name, no player score.");
     //}
 
+    // Challenge (part 1)
+    public static double calcFeetAndInchesToCentimeters(int feet, int inches) {
+        if (feet < 0 || inches < 0 || inches > 12) {
+            System.out.println("Invalid parameters.");
+            return -1;
+        }
+
+        double centimeters = (feet * 12) * 2.54;
+        centimeters += inches * 2.54;
+
+        System.out.println(feet + " feet and " + inches + " inches = " + centimeters + " cm.");
+        return centimeters;
+    }
+
+    // Challenge (part 2)
+    public static double calcFeetAndInchesToCentimeters(double inches) {
+
+        if (inches < 0) {
+            System.out.println("Invalid parameters.");
+            return -1;
+        }
+
+        int totFeet = (int) inches / 12;
+        double remInches = inches % 12;
+
+        return calcFeetAndInchesToCentimeters(totFeet, (int) remInches);
+
+    }
 }
