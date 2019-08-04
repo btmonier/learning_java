@@ -35,6 +35,7 @@ public class Main {
         //   * the terminator (a logic statement that will eventually become false)
         //   * the incrementer (i++)
         // ...remember that arrays start at 0 since why most for-loops start at 0
+        System.out.println("=== PREAMBLE ===");
         for (int i = 0; i <= 5; i++) {
             System.out.println("Loop " + i + " hello!");
         }
@@ -68,7 +69,28 @@ public class Main {
 
         // === CHALLENGE 3 ==========================================
 
-        //
+        // (1) Create a for statement using any range of numbers
+        // (2) Determine if the number is a prime number using the isPrime method
+        // (3) If it is a prime number, print it out AND increment a count of the
+        //     number of prime numbers found
+        // (4) If that count is 3 exit the for-loop
+        // HINT: Use the break; statement to exit
+
+        System.out.println("\n=== CHALLENGE 3 ===");
+        int primeStart = 101;
+        int primeEnd = 302;
+        System.out.println("--- Determining prime numbers between " + primeStart + " and " + primeEnd + " ---");
+        int count = 0;
+        for (int i = primeStart; i <= primeEnd; i++) {
+            if (isPrime(i)) {
+                System.out.println("Prime number... " + i);
+                count++;
+                if (count == 5) {
+                    System.out.println("Exiting for-loop");
+                    break;
+                }
+            }
+        }
     }
 
 
@@ -81,8 +103,9 @@ public class Main {
         if (n == 1) {
             return false;
         }
-
-        for (int i = 2; i <= n / 2; i++) {
+        // Use square-root for optimization [Math.sqrt()]
+        for (int i = 2; i <= (long) Math.sqrt(n); i++) {
+            System.out.println("Looping " + i);
             if (n % i == 0) {
                 return false;
             }
