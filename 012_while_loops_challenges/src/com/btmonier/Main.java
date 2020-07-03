@@ -57,6 +57,7 @@ public class Main {
 
         System.out.println("\n\n=== CHALLENGE 02 ===");
         System.out.println("Number is positive... " + isPalindrome(31113));
+
     }
 
     // Challenge 1
@@ -101,11 +102,6 @@ public class Main {
 
             number /= 10;
         }
-
-//        boolean pal = reverse == forward;
-
         return number;
-
-
     }
 }
