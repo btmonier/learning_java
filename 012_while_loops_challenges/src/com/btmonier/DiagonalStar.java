@@ -24,7 +24,7 @@ package com.btmonier;
 
 public class DiagonalStar {
     public static void main(String[] args) {
-        printSquareStar(20);
+        printSquareStar(35);
     }
 
     public static void printSquareStar(int number) {
