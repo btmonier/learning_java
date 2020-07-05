@@ -19,6 +19,13 @@ public class Main {
         // Initialize the car class
         Car porsche = new Car(); // init with `new`
         Car cadillac = new Car();
-        porsche.model = "Carrera";
+        System.out.println("Car model: " + cadillac.getModel());
+        cadillac.setModel("Fleetwood");
+        System.out.println("Car model: " + cadillac.getModel());
+        Car ford = new Car();
+        ford.setModel("Mustang");
+        System.out.println("Car model: " + ford.getModel());
+        porsche.setModel("911");
+        System.out.println("Car model: " + porsche.getModel());
     }
 }
