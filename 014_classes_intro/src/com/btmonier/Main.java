@@ -27,5 +27,22 @@ public class Main {
         System.out.println("Car model: " + ford.getModel());
         porsche.setModel("911");
         System.out.println("Car model: " + porsche.getModel());
+
+        System.out.println();
+        System.out.println("=== CHALLENGE ===");
+        Person person = new Person();
+        person.setFirstName("");   // firstName is set to empty string
+        person.setLastName("");    // lastName is set to empty string
+        person.setAge(10);
+        System.out.println("fullName= " + person.getFullName());
+        System.out.println("teen= " + person.isTeen());
+        person.setFirstName("John");    // firstName is set to John
+        person.setAge(18);
+        System.out.println("fullName= " + person.getFullName());
+        System.out.println("teen= " + person.isTeen());
+        person.setLastName("Smith");    // lastName is set to Smith
+        System.out.println("fullName= " + person.getFullName());
+        person.setAge(-5);
+        System.out.println("age... " + person.getAge());
     }
 }
