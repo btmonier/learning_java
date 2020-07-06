@@ -15,18 +15,39 @@
 package com.btmonier;
 
 public class BankAccount {
-    private int accountNumber; // could use just "number" instead of "accountNumber" DRY...
+    // Fields
+    private String accountNumber; // could use just "number" instead of "accountNumber" DRY...
     private double balance;
     private String customerName;
     private String email;
     private String phoneNumber;
 
+    // Make our own constructor OR constructors
+    //// NOTE: We can override constructors just like methods
+    //// Default constructor - if no info added
+    public BankAccount() {
+        this("12345", 3.50, "Default name", "Default address", "Default phone number");
+        System.out.println("Empty constructor called.");
+    }
 
-    public int getAccountNumber() {
+    //// Add all information...
+    public BankAccount(String accountNumber, double balance, String customerName, String email, String phoneNumber) {
+        System.out.println("Account constructor with parameters called");
+        // set the field values
+        // NOTE: this is better than calling setters (i.e. use this.*)
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+        this.customerName = customerName;
+        this.email = email;
+        this.phoneNumber = phoneNumber;
+    }
+
+    // Getters and setters
+    public String getAccountNumber() {
         return accountNumber;
     }
 
-    public void setAccountNumber(int accountNumber) {
+    public void setAccountNumber(String accountNumber) {
         this.accountNumber = accountNumber;
     }
 
