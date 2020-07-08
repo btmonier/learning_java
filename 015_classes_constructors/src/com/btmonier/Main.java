@@ -38,7 +38,7 @@ public class Main {
         BankAccount myAccount2 = new BankAccount();
         System.out.println("Email........ " + myAccount2.getEmail());*/
 
-        VipCustomer bigSpender = new VipCustomer();
+/*        VipCustomer bigSpender = new VipCustomer();
         System.out.println(bigSpender.getName());
         System.out.println(bigSpender.getCreditLimit());
         System.out.println(bigSpender.getEmailAddress());
@@ -46,6 +46,21 @@ public class Main {
         VipCustomer bigSpender2 = new VipCustomer("Brandon", 3000.00);
         System.out.println(bigSpender2.getName());
         System.out.println(bigSpender2.getCreditLimit());
-        System.out.println(bigSpender2.getEmailAddress());
+        System.out.println(bigSpender2.getEmailAddress());*/
+
+/*        Wall wall = new Wall(5,4);
+        System.out.println("area= " + wall.getArea());
+        wall.setHeight(-1.5);
+        System.out.println("width= " + wall.getWidth());
+        System.out.println("height= " + wall.getHeight());
+        System.out.println("area= " + wall.getArea());*/
+
+        Point first = new Point(6, 5);
+        Point second = new Point(3, 1);
+        System.out.println("distance(0,0)= " + first.distance());
+        System.out.println("distance(second)= " + first.distance(second));
+        System.out.println("distance(2,2)= " + first.distance(2, 2));
+        Point point = new Point();
+        System.out.println("distance()= " + point.distance());
     }
 }
