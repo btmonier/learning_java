@@ -54,7 +54,6 @@ public class Main {
         System.out.println("width= " + wall.getWidth());
         System.out.println("height= " + wall.getHeight());
         System.out.println("area= " + wall.getArea());*/
-
         Point first = new Point(6, 5);
         Point second = new Point(3, 1);
         System.out.println("distance(0,0)= " + first.distance());
