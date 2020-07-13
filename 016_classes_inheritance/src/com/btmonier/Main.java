@@ -16,10 +16,12 @@ package com.btmonier;
 public class Main {
 
     public static void main(String[] args) {
-        Animal animal = new Animal("Animal", 1, 1, 5, 5);
-        Dog dog = new Dog("Labrador", 8, 20, 2, 4, 1, 20, "short");
-//        dog.eat();
-        dog.walk();
-//        dog.run();
+        Outlander outlander = new Outlander(36);
+        outlander.accelerate(30);
+        outlander.accelerate(20);
+        outlander.accelerate(5);
+        outlander.steer(3);
+        outlander.accelerate(-5);
+        outlander.accelerate(-40);
     }
 }
