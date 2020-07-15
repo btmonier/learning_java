@@ -53,6 +53,5 @@ public class Main {
         Paper paper = new Paper("printer", "white", dimensions2, 5, "bigly");
         Room room = new Room(book, cup, paper);
         room.relaxInRoom("Java", 42, "crane");
-        room.getCup().isHasHandle();
     }
 }
